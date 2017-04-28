@@ -1,0 +1,13 @@
+def product(num):
+    num=str(num)
+    i=len(num) 
+    left_sum=[]
+    right_sum=[]
+    prd=[]
+    for p in range(i-1):
+        array_left_sum.append(int(num[0:p+1]))
+        array_right_sum.append(int(num[p+1:i])
+        prd.append(array_left_sum[p]*array_right_sum[p])
+    return(max(prd))
+num=12345
+print(product(num))
