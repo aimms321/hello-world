@@ -1,0 +1,20 @@
+from itertools import permutations
+
+def product(num):
+    num=str(num)
+    num_list=list(permutations(num))
+    prd=[]
+    for num in num_list:
+        num="".join(num)
+        i=len(num) 
+        left_sum=[]
+        right_sum=[]
+        for p in range(i-1):
+            left_sum.append(int(num[0:p+1]))
+            right_sum.append(int(num[p+1:i]))
+            prd.append(left_sum[p]*right_sum[p])
+            print(left_sum[p]*right_sum[p])
+    return(max(prd))
+
+num=12345
+print(product(num))
